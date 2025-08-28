@@ -25,7 +25,7 @@ export const Footer = styled.Text(({ theme }) => ({
   fontSize: theme.size.sm
 }));
 
-export const BtmSmall = styled.Text(({ theme }) => ({
+export const BtnSmall = styled.Text(({ theme }) => ({
   fontFamily: theme.font.regular,
   fontSize: theme.size.lg
 }));
