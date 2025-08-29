@@ -1,5 +1,5 @@
-import { PageContainer } from "../../src/components/PageContainer";
-import { Title } from "../../src/components/Typography";
+import { PageContainer } from "@components/PageContainer";
+import { Title } from "@components/Typography";
 
 export default function ProfileScreen() {
   return (
