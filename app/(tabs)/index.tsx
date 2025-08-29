@@ -1,5 +1,5 @@
-import { PageContainer } from "../src/components/PageContainer";
-import { Button } from "../src/components/buttons/Button";
+import { PageContainer } from "../../src/components/PageContainer";
+import { Button } from "../../src/components/buttons/Button";
 
 export default function Home() {
   return (
