@@ -1,19 +1,20 @@
-import { View, ViewProps } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { ViewProps } from "react-native";
 import { PropsWithChildren } from "react";
 import { theme } from "../theme";
 
 export const PageContainer = ({ children, ...rest }: PropsWithChildren<ViewProps>) => {
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: theme.colors.bg, 
+        backgroundColor: theme.colors.bg,
       }}
       {...rest}
     >
       {children}
-    </View>
+    </SafeAreaView>
   );
 };

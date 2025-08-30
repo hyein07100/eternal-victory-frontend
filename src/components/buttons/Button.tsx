@@ -1,9 +1,9 @@
-import { Pressable, ViewProps } from "react-native";
+import { Pressable, PressableProps } from "react-native";
 import styled from "@emotion/native";
 import { BtnBig, BtnSmall } from "../Typography";
 import { theme } from "../../theme";
 
-interface Props extends ViewProps {
+interface Props extends PressableProps {
   variant?: "big" | "small";
   white?: boolean;
   icon?: boolean;
@@ -30,9 +30,13 @@ export const Button = ({
       <ButtonWrapper height={height} white={white}>
         {icon && <Plus white={white}>＋</Plus>}
         {isBig ? (
-          <BtnBig style={{ color: white ? theme.colors.primary : "#fff" }}>{children}</BtnBig>
+          <BtnBig style={{ color: white ? theme.colors.primary : "#fff" }}>
+            {children}
+          </BtnBig>
         ) : (
-          <BtnSmall style={{ color: white ? theme.colors.primary : "#fff" }}>{children}</BtnSmall>
+          <BtnSmall style={{ color: white ? theme.colors.primary : "#fff" }}>
+            {children}
+          </BtnSmall>
         )}
       </ButtonWrapper>
     </Pressable>
@@ -40,7 +44,7 @@ export const Button = ({
 };
 
 const ButtonWrapper = styled.View<{ height: number; white: boolean }>(
-  ({ height, white, theme }) => ({
+  ({ height, white }) => ({
     width: 310,
     height,
     backgroundColor: white ? "#fff" : theme.colors.primary,
@@ -54,7 +58,7 @@ const ButtonWrapper = styled.View<{ height: number; white: boolean }>(
   })
 );
 
-const Plus = styled.Text<{ white: boolean }>(({ white, theme }) => ({
+const Plus = styled.Text<{ white: boolean }>(({ white }) => ({
   fontSize: 40,
   color: white ? theme.colors.primary : "#fff",
   marginRight: 30,
