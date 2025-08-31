@@ -10,6 +10,6 @@
       "@assets/*": ["assets/*"]
     }
   },
-  "include": ["app", "src", "types"], 
+  "include": ["app", "src", "types", "**/*.ts", "**/*.tsx", "**/*.d.ts"], 
   "exclude": ["node_modules"]
 }
