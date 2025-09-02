@@ -1,21 +1,21 @@
 import React from "react";
 import { ImageSourcePropType, Dimensions } from "react-native";
 import styled from "@emotion/native";
-import { SmallTitle, Footer , Body } from "@components/Typography"; 
+import { SmallTitle, Body } from "@components/Typography"; 
 import { theme } from "@theme";
 
 const { width: screenWidth } = Dimensions.get("window");
 
 interface ProfileCardProps {
-  avatar: ImageSourcePropType;
+  profile: ImageSourcePropType;
   nickname: string; 
   year?: number;    
 }
 
-export const ProfileCard = ({ avatar, nickname, year = new Date().getFullYear() }: ProfileCardProps) => {
+export const ProfileCard = ({ profile, nickname, year = new Date().getFullYear() }: ProfileCardProps) => {
   return (
     <Container>
-      <Avatar source={avatar} />
+      <Profile source={profile} />
       <Info>
         <SmallTitle style={{marginBottom : 4}}>{nickname} 님의 야구 통계</SmallTitle>
         <Body style={{color:theme.colors.gray}}>{year} 기준</Body>
@@ -39,7 +39,7 @@ const Container = styled.View(() => ({
   elevation: 2,
 }));
 
-const Avatar = styled.Image(() => ({
+const Profile = styled.Image(() => ({
   width: 70,
   height: 70,
   borderRadius: 100,
