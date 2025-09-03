@@ -1,12 +1,16 @@
-import { PageContainer } from "@components/PageContainer";
-import { Title } from "@components/Typography";
+import { Row } from "./style";
+import { Ionicons } from "@expo/vector-icons";
+import { theme } from "@theme";
+
+import { ScrollPageContainer } from "@components/PageContainer";
 import { ProfileCard } from "@components/Stats/ProfileCard";
 import { WinRateCard } from "@components/Stats/WinRateCard";
 import { StatCard } from "@components/Stats/StatsCard";
+import { SummaryCard } from "@components/Stats/SummaryCard";
 
 export default function StatsScreen() {
   return (
-    <PageContainer>
+    <ScrollPageContainer>
       <ProfileCard
         profile={require("@assets/profile.jpg")}
         nickname="최강두산"
@@ -27,6 +31,19 @@ export default function StatsScreen() {
         unit="경기" 
         max={10} 
       />
-    </PageContainer>
+
+      <Row>
+      <SummaryCard
+        icon={<Ionicons name="calendar" size={20} color={theme.colors.primary} />}
+        label="총 관람 경기"
+        value={20}
+      />
+      <SummaryCard
+        icon={<Ionicons name="trophy" size={20} color={theme.colors.primary} />}
+        label="연속 승리"
+        value={6}
+      />
+    </Row>
+    </ScrollPageContainer>
   );
 }
