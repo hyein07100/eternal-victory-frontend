@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/native";
-import { SmallTitle, Body } from "@components/Typography";
+import { Body } from "@components/Typography";
 import { theme } from "@theme";
 import { ViewStyle, Dimensions } from "react-native";
 
