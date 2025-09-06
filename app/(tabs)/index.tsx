@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <Button variant="big" icon onPress={() => router.push("/login")}>
+      <Button variant="big" icon onPress={() => router.push("/write")}>
         직관 일기 작성하기
       </Button>
 
