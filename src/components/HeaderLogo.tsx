@@ -6,7 +6,7 @@ import { View } from "react-native";
 export function HeaderLogo() {
   return (
     <Pressable onPress={() => router.push("/")}>
-       <View style={{ padding: 7 }}>
+       <View style={{ alignSelf: "center" }}>
         <Logo width={160} height={40} />
       </View>
     </Pressable>
