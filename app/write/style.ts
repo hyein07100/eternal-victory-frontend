@@ -7,7 +7,8 @@ const contentWidth = windowWidth * 0.9;
 
 export const Container = styled.View({
   width: contentWidth,
-  marginTop: 20,
+  marginTop: 0,
+  paddingTop:0
 });
 
 export const Row = styled.View({
